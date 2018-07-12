@@ -12,7 +12,9 @@
     "morgan": "~1.9.0"
   },
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.1",
     "@types/express": "^4.16.0",
+    "@types/morgan": "^1.7.35",
     "ts-node-dev": "^1.0.0-pre.26",
     "tslint": "^5.10.0",
     "typescript": "^2.9.2"
