@@ -1,13 +1,14 @@
 {
   "name": "app",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "micro"
+    "start": "node ./bin/www"
   },
-  "license": "ISC",
   "dependencies": {
-    "micro": "^9.3.2"
-  },
-  "devDependencies": {}
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "morgan": "~1.9.0"
+  }
 }
