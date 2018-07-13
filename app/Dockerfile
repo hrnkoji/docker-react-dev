@@ -1,6 +1,6 @@
 FROM node:8.11-alpine
-WORKDIR /app
+WORKDIR /usr/app
 EXPOSE 3000
-ADD package*.json /app/
+COPY . .
 RUN npm install
 CMD ["npm", "start"]
