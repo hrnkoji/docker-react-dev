@@ -5,6 +5,17 @@ services:
     container_name: app
     tty: true
     volumes:
-      - ./app:/app
+      - ./app:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
     ports:
       - "3000:3000"
+  server:
+    build: server
+    container_name: server
+    volumes:
+      - ./server:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "8080:8080"
