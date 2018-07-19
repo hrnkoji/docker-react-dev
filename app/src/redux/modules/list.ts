@@ -1,4 +1,4 @@
-type Item = { id: number, name: string, img: string }
+interface IItem { id: number, name: string, img: string }
 
 // initialState
 const initialState = {
@@ -8,12 +8,9 @@ const initialState = {
 // actions
 const UPDATE_LIST = 'UPDATE_LIST';
 
-type UpdateList = {
-  type: 'UPDATE_LIST',
-  payload: Item[]
-}
+interface IUpdateList { type: 'UPDATE_LIST', payload: IItem[] }
 
-type Actions = UpdateList;
+type Actions = IUpdateList;
 
 // reducer
 export default function reducer(state = initialState, action: Actions) {
@@ -28,6 +25,6 @@ export default function reducer(state = initialState, action: Actions) {
 }
 
 // action creator
-export function updateList(list: Item[]) {
+export function updateList(list: IItem[]) {
   return { type: UPDATE_LIST, payload: list }
 }
